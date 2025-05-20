@@ -1,0 +1,23 @@
+## Visual Studio & .NET ##
+**/bin/
+**/obj/
+**/.vs/
+*/.user
+*/.suo
+*/.userprefs
+*/.lock.json
+
+## Build outputs ##
+*/.dll
+*/.exe
+*/.pdb
+*/.cache
+
+## NuGet ##
+**/packages/
+*/.nupkg
+nuget.exe
+
+## OS junk ##
+**/.DS_Store
+**/Thumbs.db
