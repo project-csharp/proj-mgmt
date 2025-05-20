@@ -1,1 +1,1 @@
-# simu-proj-mgmt
+# proj-mgmt
