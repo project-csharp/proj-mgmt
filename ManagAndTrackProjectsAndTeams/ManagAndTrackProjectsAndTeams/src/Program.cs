@@ -1,9 +1,6 @@
-﻿using ManagAndTrackProjectsAndTeams.src.Views;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System;
 using System.Windows.Forms;
+using ManagAndTrackProjectsAndTeams.src.Views;
 
 namespace ManagAndTrackProjectsAndTeams
 {
@@ -17,7 +14,7 @@ namespace ManagAndTrackProjectsAndTeams
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TeamForm());
+            Application.Run(new SplashForm());
         }
     }
 }
