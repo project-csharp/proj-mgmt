@@ -72,20 +72,44 @@
     <Compile Include="src\Views\SplashForm.Designer.cs">
       <DependentUpon>SplashForm.cs</DependentUpon>
     </Compile>
+    <!--  -->
+    <Compile Include="src\Views\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Views\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Views\ProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Views\ProjectForm.Designer.cs">
+      <DependentUpon>ProjectForm.cs</DependentUpon>
+    </Compile>
+    <!--  -->
+    <Compile Include="src\Views\TeamFoem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Views\TeamFoem.Designer.cs">
+      <DependentUpon>TeamFoem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\Views\TaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Views\TaskForm.Designer.cs">
+      <DependentUpon>TaskForm.cs</DependentUpon>
+    </Compile>
+    <!--  -->
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-
     <!-- </EmbeddedResource> -->
-
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -101,7 +125,34 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-
+    <None Include="src\Resources\icons\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Resources\icons\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Resources\icons\teams.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Resources\icons\projects.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Resources\icons\statistics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Resources\icons\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Resources\icons\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Resources\icons\icons8-search-32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Resources\icons\todo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\Resources\icons\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
