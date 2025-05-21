@@ -78,7 +78,7 @@
             // guna2PictureBox
             // 
             this.guna2PictureBox.BorderRadius = 75;
-            this.guna2PictureBox.Image = global::ManagAndTrackProjectsAndTeams.Properties.Resources.OIP;
+            //this.guna2PictureBox.Image = global::ManagAndTrackProjectsAndTeams.Properties.Resources.OIP;
             this.guna2PictureBox.ImageRotate = 0F;
             this.guna2PictureBox.Location = new System.Drawing.Point(215, 41);
             this.guna2PictureBox.Name = "guna2PictureBox";
