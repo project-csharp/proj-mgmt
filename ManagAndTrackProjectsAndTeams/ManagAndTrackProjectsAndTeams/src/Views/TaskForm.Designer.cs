@@ -36,18 +36,20 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.guna2DateTimePicker1 = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.comboBoxStatus = new System.Windows.Forms.ComboBox();
+            this.dateTimePickerDueDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            this.ComboBoxItemProject = new System.Windows.Forms.ComboBox();
+            this.dataGridViewTask = new System.Windows.Forms.DataGridView();
+            this.comboBoxTeams = new System.Windows.Forms.ComboBox();
+            this.txtDescription = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTaskTitle = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.label8 = new System.Windows.Forms.Label();
+            this.comboBoxPriority = new System.Windows.Forms.ComboBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTask)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,6 +68,7 @@
             this.guna2Button6.Size = new System.Drawing.Size(180, 45);
             this.guna2Button6.TabIndex = 40;
             this.guna2Button6.Text = "Update";
+            this.guna2Button6.Click += new System.EventHandler(this.Guna2Button6_Click);
             // 
             // guna2Button3
             // 
@@ -82,6 +85,7 @@
             this.guna2Button3.Size = new System.Drawing.Size(180, 45);
             this.guna2Button3.TabIndex = 39;
             this.guna2Button3.Text = "Delete";
+            this.guna2Button3.Click += new System.EventHandler(this.Guna2Button3_Click);
             // 
             // guna2Button2
             // 
@@ -97,6 +101,7 @@
             this.guna2Button2.Size = new System.Drawing.Size(180, 45);
             this.guna2Button2.TabIndex = 38;
             this.guna2Button2.Text = "Add Task";
+            this.guna2Button2.Click += new System.EventHandler(this.Guna2Button2_Click);
             // 
             // label7
             // 
@@ -128,7 +133,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(293, 304);
+            this.label4.Location = new System.Drawing.Point(293, 269);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 17);
             this.label4.TabIndex = 34;
@@ -143,73 +148,81 @@
             this.label3.TabIndex = 33;
             this.label3.Text = "Date Start";
             // 
-            // comboBox4
+            // comboBoxStatus
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(296, 337);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(229, 24);
-            this.comboBox4.TabIndex = 32;
+            this.comboBoxStatus.FormattingEnabled = true;
+            this.comboBoxStatus.Items.AddRange(new object[] {
+            "in_progress",
+            "new",
+            "completed",
+            "overdue"});
+            this.comboBoxStatus.Location = new System.Drawing.Point(296, 302);
+            this.comboBoxStatus.Name = "comboBoxStatus";
+            this.comboBoxStatus.Size = new System.Drawing.Size(229, 24);
+            this.comboBoxStatus.TabIndex = 32;
             // 
-            // guna2DateTimePicker1
+            // dateTimePickerDueDate
             // 
-            this.guna2DateTimePicker1.BorderRadius = 10;
-            this.guna2DateTimePicker1.Checked = true;
-            this.guna2DateTimePicker1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
-            this.guna2DateTimePicker1.Location = new System.Drawing.Point(296, 183);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(2025, 5, 22, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1900, 4, 30, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
-            this.guna2DateTimePicker1.Size = new System.Drawing.Size(229, 36);
-            this.guna2DateTimePicker1.TabIndex = 31;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2025, 5, 22, 0, 0, 0, 0);
+            this.dateTimePickerDueDate.BorderRadius = 10;
+            this.dateTimePickerDueDate.Checked = true;
+            this.dateTimePickerDueDate.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dateTimePickerDueDate.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.dateTimePickerDueDate.Format = System.Windows.Forms.DateTimePickerFormat.Long;
+            this.dateTimePickerDueDate.Location = new System.Drawing.Point(296, 183);
+            this.dateTimePickerDueDate.MaxDate = new System.DateTime(2025, 5, 22, 0, 0, 0, 0);
+            this.dateTimePickerDueDate.MinDate = new System.DateTime(1900, 4, 30, 0, 0, 0, 0);
+            this.dateTimePickerDueDate.Name = "dateTimePickerDueDate";
+            this.dateTimePickerDueDate.Size = new System.Drawing.Size(229, 36);
+            this.dateTimePickerDueDate.TabIndex = 31;
+            this.dateTimePickerDueDate.Value = new System.DateTime(2025, 5, 22, 0, 0, 0, 0);
             // 
-            // comboBox2
+            // ComboBoxItemProject
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(18, 413);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(229, 24);
-            this.comboBox2.TabIndex = 29;
+            this.ComboBoxItemProject.FormattingEnabled = true;
+            this.ComboBoxItemProject.Location = new System.Drawing.Point(18, 413);
+            this.ComboBoxItemProject.Name = "ComboBoxItemProject";
+            this.ComboBoxItemProject.Size = new System.Drawing.Size(229, 24);
+            this.ComboBoxItemProject.TabIndex = 29;
             // 
-            // dataGridView1
+            // dataGridViewTask
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(531, 99);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 26;
-            this.dataGridView1.Size = new System.Drawing.Size(545, 275);
-            this.dataGridView1.TabIndex = 28;
+            this.dataGridViewTask.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTask.Location = new System.Drawing.Point(531, 99);
+            this.dataGridViewTask.Name = "dataGridViewTask";
+            this.dataGridViewTask.RowHeadersWidth = 51;
+            this.dataGridViewTask.RowTemplate.Height = 26;
+            this.dataGridViewTask.Size = new System.Drawing.Size(545, 275);
+            this.dataGridViewTask.TabIndex = 28;
+            this.dataGridViewTask.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewTask_CellClick);
+            this.dataGridViewTask.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewTask_CellContentClick);
             // 
-            // comboBox1
+            // comboBoxTeams
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(18, 337);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(229, 24);
-            this.comboBox1.TabIndex = 27;
+            this.comboBoxTeams.FormattingEnabled = true;
+            this.comboBoxTeams.Location = new System.Drawing.Point(18, 337);
+            this.comboBoxTeams.Name = "comboBoxTeams";
+            this.comboBoxTeams.Size = new System.Drawing.Size(229, 24);
+            this.comboBoxTeams.TabIndex = 27;
+            this.comboBoxTeams.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged);
             // 
-            // guna2TextBox1
+            // txtDescription
             // 
-            this.guna2TextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox1.DefaultText = "";
-            this.guna2TextBox1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2TextBox1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox1.Location = new System.Drawing.Point(18, 238);
-            this.guna2TextBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2TextBox1.Name = "guna2TextBox1";
-            this.guna2TextBox1.PlaceholderText = "";
-            this.guna2TextBox1.SelectedText = "";
-            this.guna2TextBox1.Size = new System.Drawing.Size(229, 48);
-            this.guna2TextBox1.TabIndex = 26;
+            this.txtDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtDescription.DefaultText = "";
+            this.txtDescription.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtDescription.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtDescription.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDescription.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtDescription.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDescription.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtDescription.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtDescription.Location = new System.Drawing.Point(18, 238);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.PlaceholderText = "";
+            this.txtDescription.SelectedText = "";
+            this.txtDescription.Size = new System.Drawing.Size(229, 48);
+            this.txtDescription.TabIndex = 26;
             // 
             // label2
             // 
@@ -235,6 +248,7 @@
             this.guna2Button5.Size = new System.Drawing.Size(180, 45);
             this.guna2Button5.TabIndex = 7;
             this.guna2Button5.Text = "Back";
+            this.guna2Button5.Click += new System.EventHandler(this.Guna2Button5_Click);
             // 
             // label1
             // 
@@ -247,12 +261,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Task Mangement Section";
             // 
-            // textBox1
+            // txtTaskTitle
             // 
-            this.textBox1.Location = new System.Drawing.Point(18, 153);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(229, 24);
-            this.textBox1.TabIndex = 30;
+            this.txtTaskTitle.Location = new System.Drawing.Point(18, 153);
+            this.txtTaskTitle.Name = "txtTaskTitle";
+            this.txtTaskTitle.Size = new System.Drawing.Size(229, 24);
+            this.txtTaskTitle.TabIndex = 30;
             // 
             // panel2
             // 
@@ -265,12 +279,38 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1087, 93);
             this.panel2.TabIndex = 24;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.Panel2_Paint);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(293, 380);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(89, 17);
+            this.label8.TabIndex = 42;
+            this.label8.Text = "Select proirty";
+            this.label8.Click += new System.EventHandler(this.Label8_Click);
+            // 
+            // comboBoxPriority
+            // 
+            this.comboBoxPriority.FormattingEnabled = true;
+            this.comboBoxPriority.Items.AddRange(new object[] {
+            "medium",
+            "low",
+            "high"});
+            this.comboBoxPriority.Location = new System.Drawing.Point(296, 413);
+            this.comboBoxPriority.Name = "comboBoxPriority";
+            this.comboBoxPriority.Size = new System.Drawing.Size(229, 24);
+            this.comboBoxPriority.TabIndex = 41;
+            this.comboBoxPriority.SelectedIndexChanged += new System.EventHandler(this.ComboBox1_SelectedIndexChanged_1);
             // 
             // TaskForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1087, 623);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.comboBoxPriority);
             this.Controls.Add(this.guna2Button6);
             this.Controls.Add(this.guna2Button3);
             this.Controls.Add(this.guna2Button2);
@@ -279,18 +319,20 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.guna2DateTimePicker1);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.guna2TextBox1);
+            this.Controls.Add(this.comboBoxStatus);
+            this.Controls.Add(this.dateTimePickerDueDate);
+            this.Controls.Add(this.ComboBoxItemProject);
+            this.Controls.Add(this.dataGridViewTask);
+            this.Controls.Add(this.comboBoxTeams);
+            this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTaskTitle);
             this.Controls.Add(this.panel2);
             this.Name = "TaskForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TaskTeam";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.TaskForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTask)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -308,16 +350,18 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private Guna.UI2.WinForms.Guna2DateTimePicker guna2DateTimePicker1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private System.Windows.Forms.ComboBox comboBoxStatus;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dateTimePickerDueDate;
+        private System.Windows.Forms.ComboBox ComboBoxItemProject;
+        private System.Windows.Forms.DataGridView dataGridViewTask;
+        private System.Windows.Forms.ComboBox comboBoxTeams;
+        private Guna.UI2.WinForms.Guna2TextBox txtDescription;
         private System.Windows.Forms.Label label2;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTaskTitle;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox comboBoxPriority;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ManagAndTrackProjectsAndTeams.control;
+using System;
 using System.Windows.Forms;
 
 namespace ManagAndTrackProjectsAndTeams.src.Views
@@ -14,9 +15,19 @@ namespace ManagAndTrackProjectsAndTeams.src.Views
         {
             if (!ValidateInputs()) return;
 
-            // كود تسجيل المستخدم
-            MessageBox.Show("تم التسجيل بنجاح!");
-            this.Close();
+            UserController controller = new UserController();
+            bool success = controller.RegisterUser(txtFullName.Text, txtPassword.Text, txtEmail.Text);
+
+            if (success)
+            {
+                MessageBox.Show("تم التسجيل بنجاح!");
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("حدث خطأ أثناء التسجيل.");
+            }
+
         }
 
         private bool ValidateInputs()
@@ -62,6 +73,11 @@ namespace ManagAndTrackProjectsAndTeams.src.Views
         {
             new LoginForm().Show();
             this.Close();
+        }
+
+        private void RegisterForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
