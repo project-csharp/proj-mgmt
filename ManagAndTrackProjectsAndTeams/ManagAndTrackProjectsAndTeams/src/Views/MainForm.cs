@@ -64,12 +64,17 @@ namespace ManagAndTrackProjectsAndTeams.src.Views
 
         private void BtnTeams_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Sorry! this form coming soon");
+            TeamFoem teamfoem = new TeamFoem();
+            teamfoem.Show();
+            
+
+                this.Hide(); // لإخفاء الفورم الحالي (LoginForm)
         }
 
         private void BtnProjects_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Sorry! this form will coming soon");
+           
+            MessageBox.Show("You are already in home page!");
         }
 
         private void BtnStatistics_Click(object sender, EventArgs e)
@@ -79,7 +84,9 @@ namespace ManagAndTrackProjectsAndTeams.src.Views
 
         private void BtnTasks_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Sorry! this form coming soon");
+                   ProjectForm main = new ProjectForm();
+        main.Visible = true;
+            this.Hide();
         }
 
         private void BtnSettings_Click(object sender, EventArgs e)
@@ -89,7 +96,7 @@ namespace ManagAndTrackProjectsAndTeams.src.Views
 
         private void BtnLogout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Sorry! this form coming soon");
+            this.Close();
         }
 
         private void BtnViewTeamMem_Click(object sender, EventArgs e)
@@ -99,12 +106,20 @@ namespace ManagAndTrackProjectsAndTeams.src.Views
 
         private void BtnNewTask_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Sorry! this form coming soon");
+
+            TaskForm teamfoem = new TaskForm();
+            teamfoem.Show();
+            this.Hide(); // لإخفاء الفورم الحالي (LoginForm)
         }
 
         private void BtnViewReports_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Sorry! this form coming soon");
+        }
+
+        private void DgTasks_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
