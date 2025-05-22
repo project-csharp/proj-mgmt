@@ -159,12 +159,12 @@
             this.guna2DateTimePicker1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.guna2DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.guna2DateTimePicker1.Location = new System.Drawing.Point(296, 183);
-            this.guna2DateTimePicker1.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.guna2DateTimePicker1.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.MaxDate = new System.DateTime(2025, 5, 22, 0, 0, 0, 0);
+            this.guna2DateTimePicker1.MinDate = new System.DateTime(1900, 4, 30, 0, 0, 0, 0);
             this.guna2DateTimePicker1.Name = "guna2DateTimePicker1";
             this.guna2DateTimePicker1.Size = new System.Drawing.Size(229, 36);
             this.guna2DateTimePicker1.TabIndex = 31;
-            this.guna2DateTimePicker1.Value = new System.DateTime(2025, 5, 20, 23, 14, 2, 547);
+            this.guna2DateTimePicker1.Value = new System.DateTime(2025, 5, 22, 0, 0, 0, 0);
             // 
             // comboBox2
             // 
@@ -179,6 +179,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(531, 99);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 26;
             this.dataGridView1.Size = new System.Drawing.Size(545, 275);
             this.dataGridView1.TabIndex = 28;
@@ -265,7 +266,7 @@
             this.panel2.Size = new System.Drawing.Size(1087, 93);
             this.panel2.TabIndex = 24;
             // 
-            // TaskTeam
+            // TaskForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -287,7 +288,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.panel2);
-            this.Name = "TaskTeam";
+            this.Name = "TaskForm";
             this.Text = "TaskTeam";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel2.ResumeLayout(false);
