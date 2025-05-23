@@ -1,4 +1,9 @@
 ﻿using ManagAndTrackProjectsAndTeams.control;
+<<<<<<< HEAD
+using ManagAndTrackProjectsAndTeams.model;
+using ManagAndTrackProjectsAndTeams.src.model;
+=======
+>>>>>>> d8d56ec0261da7a804d8ff0871ff0151ab992d57
 using System;
 using System.Windows.Forms;
 
@@ -20,11 +25,25 @@ namespace ManagAndTrackProjectsAndTeams.src.Views
                 return;
             }
 
+<<<<<<< HEAD
+            UserModelLogin model = new UserModelLogin();
+            User user = model.AuthenticateUser(txtUsername.Text, txtPassword.Text);
+
+
+            if (user != null)
+            {
+                // تخزين معلومات الجلسة
+                Session.UserId = user.Id;
+                Session.Username = user.Username;
+
+
+=======
             UserControllerLogin userController = new UserControllerLogin();
             bool isAuthenticated = userController.Login(txtUsername.Text, txtPassword.Text);
 
             if (isAuthenticated)
             {
+>>>>>>> d8d56ec0261da7a804d8ff0871ff0151ab992d57
                 // فتح الواجهة الرئيسية MainForm
                 mainForm mainForm1 = new mainForm();
                 mainForm1.Show();

@@ -73,6 +73,10 @@
             this.lblMyTasks = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pbxProfile = new Guna.UI2.WinForms.Guna2PictureBox();
             this.txbxSearch = new Guna.UI2.WinForms.Guna2TextBox();
+<<<<<<< HEAD
+            this.label1 = new System.Windows.Forms.Label();
+=======
+>>>>>>> d8d56ec0261da7a804d8ff0871ff0151ab992d57
             this.pnlSideBar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbxLogo)).BeginInit();
             this.pnlProgress.SuspendLayout();
@@ -258,11 +262,19 @@
             // 
             this.lblTitle.BackColor = System.Drawing.Color.Transparent;
             this.lblTitle.Font = new System.Drawing.Font("Trebuchet MS", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
+            this.lblTitle.Location = new System.Drawing.Point(110, 11);
+=======
             this.lblTitle.Location = new System.Drawing.Point(110, 19);
+>>>>>>> d8d56ec0261da7a804d8ff0871ff0151ab992d57
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(340, 37);
             this.lblTitle.TabIndex = 1;
             this.lblTitle.Text = "Projects & Teams Manager";
+<<<<<<< HEAD
+            this.lblTitle.Click += new System.EventHandler(this.LblTitle_Click);
+=======
+>>>>>>> d8d56ec0261da7a804d8ff0871ff0151ab992d57
             // 
             // cbxFilter
             // 
@@ -281,7 +293,11 @@
             "Projects",
             "Teams",
             "Tasks"});
+<<<<<<< HEAD
+            this.cbxFilter.Location = new System.Drawing.Point(470, 12);
+=======
             this.cbxFilter.Location = new System.Drawing.Point(467, 20);
+>>>>>>> d8d56ec0261da7a804d8ff0871ff0151ab992d57
             this.cbxFilter.Name = "cbxFilter";
             this.cbxFilter.Size = new System.Drawing.Size(140, 36);
             this.cbxFilter.TabIndex = 2;
@@ -671,7 +687,11 @@
             this.pbxProfile.FillColor = System.Drawing.Color.Black;
             this.pbxProfile.Image = global::ManagAndTrackProjectsAndTeams.Properties.Resources.user;
             this.pbxProfile.ImageRotate = 0F;
+<<<<<<< HEAD
+            this.pbxProfile.Location = new System.Drawing.Point(974, 0);
+=======
             this.pbxProfile.Location = new System.Drawing.Point(974, 12);
+>>>>>>> d8d56ec0261da7a804d8ff0871ff0151ab992d57
             this.pbxProfile.Name = "pbxProfile";
             this.pbxProfile.Size = new System.Drawing.Size(69, 56);
             this.pbxProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -695,13 +715,31 @@
             this.txbxSearch.ForeColor = System.Drawing.Color.Black;
             this.txbxSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txbxSearch.IconLeft = global::ManagAndTrackProjectsAndTeams.Properties.Resources.icons8_search_32;
+<<<<<<< HEAD
+            this.txbxSearch.Location = new System.Drawing.Point(664, 12);
+=======
             this.txbxSearch.Location = new System.Drawing.Point(633, 20);
+>>>>>>> d8d56ec0261da7a804d8ff0871ff0151ab992d57
             this.txbxSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txbxSearch.Name = "txbxSearch";
             this.txbxSearch.PlaceholderText = "Search...";
             this.txbxSearch.SelectedText = "";
             this.txbxSearch.Size = new System.Drawing.Size(303, 36);
             this.txbxSearch.TabIndex = 3;
+<<<<<<< HEAD
+            this.txbxSearch.TextChanged += new System.EventHandler(this.TxbxSearch_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(979, 59);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 24);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "label1";
+=======
+>>>>>>> d8d56ec0261da7a804d8ff0871ff0151ab992d57
             // 
             // mainForm
             // 
@@ -709,6 +747,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(1068, 592);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pnlTasks);
             this.Controls.Add(this.pnlTeams);
             this.Controls.Add(this.pnlProgress);
@@ -798,5 +837,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblMyTasks;
         private Guna.UI2.WinForms.Guna2Button btnViewReports;
         private Guna.UI2.WinForms.Guna2Button btnNewTask;
+        private System.Windows.Forms.Label label1;
     }
 }

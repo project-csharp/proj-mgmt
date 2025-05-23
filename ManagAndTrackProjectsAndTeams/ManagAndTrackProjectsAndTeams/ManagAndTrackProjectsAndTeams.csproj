@@ -149,6 +149,7 @@
     </Reference>
     <Reference Include="System.Transactions" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -175,16 +176,33 @@
     <Compile Include="src\model\ComboBoxItem.cs" />
     <Compile Include="src\model\ComboBoxItemprojects.cs" />
     <Compile Include="src\model\ComboBoxItemTeam.cs" />
+<<<<<<< HEAD
+    <Compile Include="src\model\DashboardModel.cs" />
+    <Compile Include="src\model\ListBoxProjectItem.cs" />
+    <Compile Include="src\model\ProjectDashboardModel.cs" />
+    <Compile Include="src\model\ProjectModel.cs" />
+    <Compile Include="src\model\TaskModel.cs" />
+    <Compile Include="src\model\TeamMemberModel.cs" />
+    <Compile Include="src\model\User.cs" />
+=======
     <Compile Include="src\model\ListBoxProjectItem.cs" />
     <Compile Include="src\model\ProjectModel.cs" />
     <Compile Include="src\model\TaskModel.cs" />
     <Compile Include="src\model\TaskModelable.cs" />
     <Compile Include="src\model\TeamMemberModel.cs" />
+>>>>>>> d8d56ec0261da7a804d8ff0871ff0151ab992d57
     <Compile Include="src\model\UserModel.cs" />
     <Compile Include="src\model\UserModelLogin.cs" />
     <Compile Include="src\model\UserTeamModel.cs" />
     <Compile Include="src\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\Session.cs" />
+    <Compile Include="src\Views\Dash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\Views\Dash.Designer.cs">
+      <DependentUpon>Dash.cs</DependentUpon>
+    </Compile>
     <!--  -->
     <Compile Include="src\Views\LoginForm.cs">
       <SubType>Form</SubType>
@@ -192,6 +210,9 @@
     <Compile Include="src\Views\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="src\Views\Dash.resx">
+      <DependentUpon>Dash.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\Views\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

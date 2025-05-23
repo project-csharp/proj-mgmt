@@ -118,7 +118,11 @@ namespace ManagAndTrackProjectsAndTeams.src.Views
             ComboBoxItemProject.SelectedIndex = -1;
             comboBoxStatus.SelectedIndex = -1;
             comboBoxPriority.SelectedIndex = 1;
+<<<<<<< HEAD
+      
+=======
             dateTimePickerDueDate.Value = DateTime.Today;
+>>>>>>> d8d56ec0261da7a804d8ff0871ff0151ab992d57
         }
 
         private void Guna2Button2_Click(object sender, EventArgs e)
