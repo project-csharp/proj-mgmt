@@ -229,10 +229,17 @@ namespace ManagAndTrackProjectsAndTeams.src.Views
             UserTeamController controller = new UserTeamController();
             
             var dt = controller.GetTeamMembers();
+<<<<<<< HEAD
             dataGridView1.DataSource = dt;// . ربط البيانات بجدول العرض:
 
             // تعديل عناوين الأعمدة حسب الحاجة (اختياري)
             dataGridView1.Columns["id"].Visible = false; // إخفاء عمود الـ id  
+=======
+            dataGridView1.DataSource = dt;
+          
+            // تعديل عناوين الأعمدة حسب الحاجة (اختياري)
+            dataGridView1.Columns["id"].Visible = false; // إخفاء عمود الـ id لو تحب
+>>>>>>> d8d56ec0261da7a804d8ff0871ff0151ab992d57
             dataGridView1.Columns["UserName"].HeaderText = "اسم المستخدم";
             dataGridView1.Columns["TeamName"].HeaderText = "اسم الفريق";
             dataGridView1.Columns["role"].HeaderText = "الدور";

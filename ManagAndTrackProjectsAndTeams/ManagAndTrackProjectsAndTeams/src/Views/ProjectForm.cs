@@ -25,6 +25,10 @@ namespace ManagAndTrackProjectsAndTeams.src.Views
         {
             InitializeComponent();
             LoadProjectsToListBox();//تحميل اسماء المشاريع ل list
+<<<<<<< HEAD
+=======
+            this.StartPosition = FormStartPosition.CenterScreen;
+>>>>>>> d8d56ec0261da7a804d8ff0871ff0151ab992d57
         }
 
         private void Guna2TextBox1_TextChanged(object sender, EventArgs e)

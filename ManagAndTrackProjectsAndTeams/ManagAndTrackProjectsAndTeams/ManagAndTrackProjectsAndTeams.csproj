@@ -176,6 +176,7 @@
     <Compile Include="src\model\ComboBoxItem.cs" />
     <Compile Include="src\model\ComboBoxItemprojects.cs" />
     <Compile Include="src\model\ComboBoxItemTeam.cs" />
+<<<<<<< HEAD
     <Compile Include="src\model\DashboardModel.cs" />
     <Compile Include="src\model\ListBoxProjectItem.cs" />
     <Compile Include="src\model\ProjectDashboardModel.cs" />
@@ -183,6 +184,13 @@
     <Compile Include="src\model\TaskModel.cs" />
     <Compile Include="src\model\TeamMemberModel.cs" />
     <Compile Include="src\model\User.cs" />
+=======
+    <Compile Include="src\model\ListBoxProjectItem.cs" />
+    <Compile Include="src\model\ProjectModel.cs" />
+    <Compile Include="src\model\TaskModel.cs" />
+    <Compile Include="src\model\TaskModelable.cs" />
+    <Compile Include="src\model\TeamMemberModel.cs" />
+>>>>>>> d8d56ec0261da7a804d8ff0871ff0151ab992d57
     <Compile Include="src\model\UserModel.cs" />
     <Compile Include="src\model\UserModelLogin.cs" />
     <Compile Include="src\model\UserTeamModel.cs" />
