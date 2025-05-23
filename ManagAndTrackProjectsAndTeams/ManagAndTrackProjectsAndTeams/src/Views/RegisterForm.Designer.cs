@@ -94,12 +94,13 @@
             this.txtEmail.Location = new System.Drawing.Point(275, 100);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtEmail.Name = "txtEmail";
+            this.txtEmail.PasswordChar = '\0';
             this.txtEmail.PlaceholderText = "البريد الإلكتروني";
             this.txtEmail.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtEmail.SelectedText = "";
             this.txtEmail.Size = new System.Drawing.Size(250, 48);
             this.txtEmail.TabIndex = 5;
-            this.txtEmail.UseSystemPasswordChar = true;
+            this.txtEmail.TextChanged += new System.EventHandler(this.TxtEmail_TextChanged);
             // 
             // txtFullName
             // 
@@ -121,6 +122,7 @@
             this.txtFullName.Location = new System.Drawing.Point(275, 44);
             this.txtFullName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtFullName.Name = "txtFullName";
+            this.txtFullName.PasswordChar = '\0';
             this.txtFullName.PlaceholderText = "الاسم الكامل";
             this.txtFullName.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtFullName.SelectedText = "";
@@ -147,6 +149,7 @@
             this.txtPassword.Location = new System.Drawing.Point(275, 156);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtPassword.Name = "txtPassword";
+            this.txtPassword.PasswordChar = '●';
             this.txtPassword.PlaceholderText = "كلمة المرور";
             this.txtPassword.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtPassword.SelectedText = "";
@@ -173,6 +176,7 @@
             this.txtConfirm.Location = new System.Drawing.Point(275, 212);
             this.txtConfirm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtConfirm.Name = "txtConfirm";
+            this.txtConfirm.PasswordChar = '●';
             this.txtConfirm.PlaceholderText = "تأكيد كلمة المرور";
             this.txtConfirm.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtConfirm.SelectedText = "";

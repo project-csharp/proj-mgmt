@@ -63,5 +63,10 @@ namespace ManagAndTrackProjectsAndTeams.src.Views
             new LoginForm().Show();
             this.Close();
         }
+
+        private void TxtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
