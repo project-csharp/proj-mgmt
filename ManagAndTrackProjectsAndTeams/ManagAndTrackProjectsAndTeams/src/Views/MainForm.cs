@@ -54,7 +54,7 @@ namespace ManagAndTrackProjectsAndTeams.src.Views
 
         private void PbxProfile_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Sorry! this form coming soon");
+            
         }
 
         private void BtnHome_Click(object sender, EventArgs e)
@@ -66,26 +66,25 @@ namespace ManagAndTrackProjectsAndTeams.src.Views
         {
             TeamFoem teamfoem = new TeamFoem();
             teamfoem.Show();
-            
-
-                this.Hide(); // لإخفاء الفورم الحالي (LoginForm)
+            this.Hide(); // لإخفاء الفورم الحالي (LoginForm)
         }
 
         private void BtnProjects_Click(object sender, EventArgs e)
         {
-           
-            MessageBox.Show("You are already in home page!");
+            ProjectForm main = new ProjectForm();
+            main.Visible = true;
+            this.Hide();
         }
 
         private void BtnStatistics_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Sorry! this form coming soon");
+            MessageBox.Show("You are already in home page!");
         }
 
         private void BtnTasks_Click(object sender, EventArgs e)
         {
-                   ProjectForm main = new ProjectForm();
-        main.Visible = true;
+            TaskForm taskForm = new TaskForm();
+            taskForm.Show();
             this.Hide();
         }
 
@@ -96,12 +95,18 @@ namespace ManagAndTrackProjectsAndTeams.src.Views
 
         private void BtnLogout_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult result = MessageBox.Show("Are you sure to exit?", "Confirm exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void BtnViewTeamMem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Sorry! this form coming soon");
+            TeamFoem teamfoem = new TeamFoem();
+            teamfoem.Show();
+            this.Hide(); // لإخفاء الفورم الحالي (LoginForm)
         }
 
         private void BtnNewTask_Click(object sender, EventArgs e)
