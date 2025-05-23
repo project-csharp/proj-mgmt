@@ -25,6 +25,7 @@ namespace ManagAndTrackProjectsAndTeams.src.Views
                 this.Opacity = opacity;
                 await Task.Delay(50);
             }
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private async Task LoadResources()
@@ -45,6 +46,11 @@ namespace ManagAndTrackProjectsAndTeams.src.Views
                 this.Hide();
                 new LoginForm().Show();
             }
+        }
+
+        private void Guna2Panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
