@@ -54,7 +54,9 @@ namespace ManagAndTrackProjectsAndTeams.src.Views
 
         private void PbxProfile_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Sorry! this form coming soon");
+            ProfileForm profile = new ProfileForm();
+            profile.Show();
+           // MessageBox.Show("Sorry! this form coming soon");
         }
 
         private void BtnHome_Click(object sender, EventArgs e)
