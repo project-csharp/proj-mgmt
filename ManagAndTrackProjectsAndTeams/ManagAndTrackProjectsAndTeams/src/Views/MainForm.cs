@@ -15,6 +15,7 @@ namespace ManagAndTrackProjectsAndTeams.src.Views
         public mainForm()
         {
             InitializeComponent();
+            label1.Text = Session.Username;//تحديد مستخدم من خلال الجلسة
         }
 
         private void PnlSideBar_Paint(object sender, PaintEventArgs e)
@@ -64,22 +65,35 @@ namespace ManagAndTrackProjectsAndTeams.src.Views
 
         private void BtnTeams_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Sorry! this form coming soon");
+            TeamFoem teamfoem = new TeamFoem();
+            teamfoem.Show();
+            
+
+                this.Hide(); // لإخفاء الفورم الحالي (LoginForm)
         }
 
         private void BtnProjects_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Sorry! this form will coming soon");
+           
+            MessageBox.Show("You are already in home page!");
         }
 
         private void BtnStatistics_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Sorry! this form coming soon");
+            // فتح الواجهة الرئيسية MainForm
+            Dash mainForm1 = new Dash();
+          
+            mainForm1.Show();
+
+
+            this.Hide(); // لإخفاء الفورم الحالي (LoginForm)
         }
 
         private void BtnTasks_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Sorry! this form coming soon");
+                   ProjectForm main = new ProjectForm();
+        main.Visible = true;
+            this.Hide();
         }
 
         private void BtnSettings_Click(object sender, EventArgs e)
@@ -89,7 +103,7 @@ namespace ManagAndTrackProjectsAndTeams.src.Views
 
         private void BtnLogout_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Sorry! this form coming soon");
+            this.Close();
         }
 
         private void BtnViewTeamMem_Click(object sender, EventArgs e)
@@ -99,12 +113,30 @@ namespace ManagAndTrackProjectsAndTeams.src.Views
 
         private void BtnNewTask_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Sorry! this form coming soon");
+
+            TaskForm teamfoem = new TaskForm();
+            teamfoem.Show();
+            this.Hide(); // لإخفاء الفورم الحالي (LoginForm)
         }
 
         private void BtnViewReports_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Sorry! this form coming soon");
+        }
+
+        private void DgTasks_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void TxbxSearch_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void LblTitle_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

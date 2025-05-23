@@ -123,6 +123,7 @@
             this.linkToRegister.TabStop = true;
             this.linkToRegister.Text = "ليس لديك حساب؟ سجل الآن";
             this.linkToRegister.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.linkToRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkToRegister_LinkClicked_1);
             // 
             // LoginForm
             // 
@@ -140,6 +141,7 @@
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "تسجيل الدخول";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
 
         }
