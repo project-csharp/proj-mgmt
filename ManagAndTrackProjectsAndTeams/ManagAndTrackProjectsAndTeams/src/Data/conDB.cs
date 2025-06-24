@@ -13,7 +13,6 @@ namespace ManagAndTrackProjectsAndTeams.src.NewFolder1
             connectionString = "server=localhost;port=3306;database=ManagAndTrackProjectsAndTeams_db;user=root;password=;";
         }
 
-        // ترجع اتصال جديد
         public MySqlConnection GetConnection()
         {
             return new MySqlConnection(connectionString);
