@@ -363,5 +363,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox comboBoxPriority;
+        
     }
 }
