@@ -36,7 +36,7 @@ namespace ManagAndTrackProjectsAndTeams.src.Views
         {
             DataTable dt = model.GetProjectTasks();
 
-            chart1.Series[0].Points.Clear(); // نفرغ البيانات القديمة
+            chart1.Series[0].Points.Clear();
 
             foreach (DataRow row in dt.Rows)
             {
