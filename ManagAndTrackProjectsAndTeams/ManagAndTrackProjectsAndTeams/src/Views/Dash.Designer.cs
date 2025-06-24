@@ -85,7 +85,6 @@
             this.Load += new System.EventHandler(this.Dash_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         #endregion
