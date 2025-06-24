@@ -16,14 +16,6 @@ namespace ManagAndTrackProjectsAndTeams.src.control
         }
 
 
-
-
-
-
-
-
-
-
         public bool DeleteMember(int memberId)
         {
             conDB db = new conDB();
