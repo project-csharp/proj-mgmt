@@ -47,14 +47,4 @@ namespace ManagAndTrackProjectsAndTeams.src.control
     }
 
 
-
-
-
-
-
-
-
-
-
-
 }
