@@ -13,7 +13,7 @@
 
         public override string ToString()
         {
-            return Text; // حتى يعرض الاسم داخل الكمبو
+            return Text;
         }
     }
 }
