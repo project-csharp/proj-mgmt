@@ -60,7 +60,7 @@
             this.txtUsername.Size = new System.Drawing.Size(250, 40);
             this.txtUsername.TabIndex = 0;
             // 
-            // txtPassword
+            // txtPassword 
             // 
             this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
